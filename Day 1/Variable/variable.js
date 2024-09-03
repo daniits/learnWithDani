@@ -72,3 +72,33 @@ console.log(y) // Output: 5
 
 // Let 
 // Scope: let is block-scoped, meaning it is only accessible within the block (e.g., within {}) it was declared in.
+// Hoisting: Variable declared with 'let' are also hoisted but are not intialized. Accessing them before decleration result in a `ReferenceError`.
+// Re-declaration: You Canot re declare a `let` within the same scope.
+
+function testLet() {
+  let a = 5;
+  if (true) {
+    let a = 10;
+    console.log(a)
+  }
+  // console.log(a) // Error: a is not defined, because let is blocked-scope.
+}
+
+testLet();
+
+
+// Hoisting with let
+// console.log(z) // Error: Cannot access 'z' before intialization
+let z = 5;
+console.log(z) // Output: 5
+
+// Re-declaration
+let b = 10;
+// let b = 20; // Error: Identifier 'a' has already been declared.
+
+
+
+// Cont 
+// Scope: Like 'let', 'const' is blocked-scoped.
+// Hoisting: Variables declared with `const` are also hoisted but not intialized. Accessing them before declaration results in `ReffernceError`.
+
