@@ -81,7 +81,7 @@ function testLet() {
     let a = 10;
     console.log(a)
   }
-  // console.log(a) // Error: a is not defined, because let is blocked-scope.
+  // console.log(a) // Error: a is not defined, because `let` is blocked-scope.
 }
 
 testLet();
@@ -101,4 +101,35 @@ let b = 10;
 // Cont 
 // Scope: Like 'let', 'const' is blocked-scoped.
 // Hoisting: Variables declared with `const` are also hoisted but not intialized. Accessing them before declaration results in `ReffernceError`.
+// Re-decleration: You cannot re-declare a `const` variable within the same scope.
+// Assignment: `const` must be intialized at the time of declaration and cannot be reassigned. However, if the `const` variable is an object or array, the properties
+//              or element of the object/array can be modified.
 
+function testConst() {
+  if(true) {
+    const c = 10
+    console.log(c) //Output: 10
+  }
+  // console.log(c) // Error: c is not defined, because `const` is block-scoped.
+}
+
+testConst();
+
+// Hoisiting with const 
+// console.log(o) // Error: Cannot access 'o' before initialization
+const o = 5;
+console.log(o) // Output: 5
+
+
+// Re-declaration and assignment
+const n = 10;
+//  n = 20; // Error: Assignment to constant variable
+
+// Modifting an object decleared with const
+
+const obj = {key: 'value'};
+obj.key = 'newValue'; // Allowed 
+console.log(obj.key) // Output: 'newValue'
+
+// Re-assigning an object declared with const
+// obj = { newKey: 'newValue' }; // Error: Assignment to constant variable.
