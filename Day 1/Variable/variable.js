@@ -133,3 +133,12 @@ console.log(obj.key) // Output: 'newValue'
 
 // Re-assigning an object declared with const
 // obj = { newKey: 'newValue' }; // Error: Assignment to constant variable.
+
+
+
+
+// Key Differnce Between Variables 
+// Scope: var is function-scoped, while let and const are block-scoped.
+// Hoisting: All are hoisted, but var is initialized with undefined, while let and const are not initialized.
+// Re-declaration: var allows re-declaration; let and const do not.
+// Re-assignment: const does not allow reassignment, while let does. var also allows reassignment.
