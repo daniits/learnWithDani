@@ -74,3 +74,35 @@ function checkAge(age) {
 
 console.log(checkAge(20)); // Output: "hello"
 console.log(checkAge(15)); // Output: "hello world"
+
+
+// What Was Output of This 
+
+function outerFunction() {
+    console.log(a); // Output 1
+    var a = 10;
+    if (true) {
+        let b = 20;
+        console.log(b) // Output 2
+        var c = 30; 
+    }
+    console.log(b) // Output 3
+    console.log(c) // Output 4
+
+    const d = 20;
+    d = 40; // Throw Error 5
+}
+outerFunction();
+console.log(a) // Output 6
+console.log(b) // Output 7
+
+// Solution 
+// Output 1 Undefined But it will Not Throw Error Due To Hoisting
+// Output 2 20 (b Value)
+// Output 3 it will throw error that b is not defined and Function Execute 
+// if i comment output three then Output 4 render 
+// Output 4 30 
+// Output 5 Throw we canot Assignment to constant variable.
+// Comment Output 5 
+// Output 6 and 7 a and b is not defined because it was not that function scope 
+
