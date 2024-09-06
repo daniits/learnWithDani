@@ -76,7 +76,7 @@ console.log(checkAge(20)); // Output: "hello"
 console.log(checkAge(15)); // Output: "hello world"
 
 
-// What Was Output of This 
+// Problem: Nested Scoping, Hoisting, and Re-declarations
 
 function outerFunction() {
     console.log(a); // Output 1
