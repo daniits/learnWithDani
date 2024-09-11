@@ -101,3 +101,9 @@ function organizeSkills(users) {
     return skillMap
 }
 console.log(organizeSkills(users));
+
+
+
+// Problem 5: Unique Substrings
+// Given a string s, write a function that returns the longest substring that consists of unique characters. 
+// You should optimize your solution using a Set or an object to store character occurrences.
