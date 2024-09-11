@@ -36,19 +36,19 @@ function processStoreItems(store) {
 console.log(processStoreItems(store))
 
 
-
-let xyz = {
-    item1: { name: "Laptop", price: 1500, quantity: 2 },
-    item2: { name: "Phone", price: 800, quantity: 0 },
-    item3: { name: "Monitor", price: 200, quantity: 10 },
-    item4: { name: "Headphones", price: 100, quantity: 5 }
-};
-
-function processToGetItem(xyz){
-
-    let filterPrice = Object.values(xyz).filter(item => item.price < 1000).map(item =>({ ...item, itemValue: item.price * item.quantity}));
-    return [...filterPrice].sort((a,b) => b.quantity - a.quantity);
-}
-
-
-console.log(processToGetItem(xyz))
+// Problem 3
+// Write a function deepEqual(a, b) that checks if two values are deeply equal. This means it should work for primitive values and objects. It should consider the following:
+// If the values are primitives (like Number, String, Boolean, etc.), compare their values.
+// If the values are objects, recursively compare each key-value pair.
+// Handle edge cases where objects have different sets of keys or contain null or undefined.
+function deepEqual(a, b) {
+    // Your solution here
+  }
+  
+  let obj1 = { a: 1, b: { c: 2 } };
+  let obj2 = { a: 1, b: { c: 2 } };
+  let obj3 = { a: 1, b: { c: 3 } };
+  
+  console.log(deepEqual(obj1, obj2)); // true
+  console.log(deepEqual(obj1, obj3)); // false
+  

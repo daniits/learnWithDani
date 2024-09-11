@@ -45,3 +45,40 @@ function greet() { return "Hello!"; }
 
 
 
+// JavaScript Data Structures:
+// Data structures are ways of organizing and storing data so it can be accessed and used efficiently. 
+// In JavaScript, several built-in data structures are available.
+
+// Arrays: Arrays store an ordered list of items (elements). You can access elements by their index.
+let number = [10, 20, 30]
+
+// Objects: Objects store data in the form of key-value pairs. Keys are usually strings, and values can be any data type.
+let car = { brand: "Toyota", model: "Camry", year: 2020 };
+
+// Set: A collection of unique values, introduced in ES6. Unlike arrays, sets do not allow duplicate values.
+let uniqueNumbers = new Set([1, 2, 3, 3, 4]); // [1, 2, 3, 4]
+
+
+// Map: A collection of key-value pairs where keys can be of any type (not just strings like in regular objects). Introduced in ES6.
+let myMap = new Map();
+myMap.set('name', 'Alice');
+myMap.set(42, 'answer');
+
+
+
+// WeakSet: Similar to Set, but only allows objects as members, and it holds them weakly, meaning they can be garbage-collected 
+//          if there are no other references to the object.
+let weakSet = new WeakSet();
+let obj = { name: "John" };
+
+// WeakMap: Similar to Map but holds its keys weakly, meaning keys (which must be objects) can be garbage-collected if there are no other references to the object.
+let weakMap = new WeakMap();
+let keyObj = { id: 1 };
+weakMap.set(keyObj, "someValue");
+
+
+
+
+// Key Differences Between Data Types and Data Structures:
+// data types are the building blocks of information in JavaScript, 
+// while data structures are ways of organizing that information for efficient manipulation and access.
