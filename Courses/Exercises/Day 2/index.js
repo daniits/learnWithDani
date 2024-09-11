@@ -31,7 +31,7 @@ function processStoreItems(store) {
     // it will convert Object into Array
     let filterdItems = Object.values(store).filter(item => item.quantity > 0).map(item => ({ ...item, totalValue: item.price * item.quantity }));
 
-    return [...filterdItems].sort((a,b) => a.quantity -b.quantity);
+    return [...filterdItems].sort((a, b) => a.quantity - b.quantity);
 }
 console.log(processStoreItems(store))
 
@@ -41,14 +41,28 @@ console.log(processStoreItems(store))
 // If the values are primitives (like Number, String, Boolean, etc.), compare their values.
 // If the values are objects, recursively compare each key-value pair.
 // Handle edge cases where objects have different sets of keys or contain null or undefined.
+
 function deepEqual(a, b) {
-    // Your solution here
-  }
-  
-  let obj1 = { a: 1, b: { c: 2 } };
-  let obj2 = { a: 1, b: { c: 2 } };
-  let obj3 = { a: 1, b: { c: 3 } };
-  
-  console.log(deepEqual(obj1, obj2)); // true
-  console.log(deepEqual(obj1, obj3)); // false
-  
+    if (a === b) return true;
+    // if either is not an object or is null, return false
+    if (typeof a !== 'object' || typeof b !== 'object' || typeof a === null || typeof b === null) return false;
+    
+    // Get The keys of both Objects 
+    let keysA = Object.keys(a);
+    let keysB = Object.keys(b);
+
+    if (keysA.length !== keysB.length) return false;
+
+    // Recursively check each key and value pair
+    for (let key of keysA){
+        if(!keysB.includes(key) || !deepEqual(a[key], b[key])) return false;
+    }
+    return true;
+}
+
+let obj1 = { a: 1, b: { c: 2 } };
+let obj2 = { a: 1, b: { c: 2 } };
+let obj3 = { a: 1, b: { c: 3 } };
+
+console.log(deepEqual(obj1, obj2)); // true
+console.log(deepEqual(obj1, obj3)); // false
