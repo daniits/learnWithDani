@@ -46,7 +46,7 @@ function deepEqual(a, b) {
     if (a === b) return true;
     // if either is not an object or is null, return false
     if (typeof a !== 'object' || typeof b !== 'object' || typeof a === null || typeof b === null) return false;
-    
+
     // Get The keys of both Objects 
     let keysA = Object.keys(a);
     let keysB = Object.keys(b);
@@ -54,8 +54,8 @@ function deepEqual(a, b) {
     if (keysA.length !== keysB.length) return false;
 
     // Recursively check each key and value pair
-    for (let key of keysA){
-        if(!keysB.includes(key) || !deepEqual(a[key], b[key])) return false;
+    for (let key of keysA) {
+        if (!keysB.includes(key) || !deepEqual(a[key], b[key])) return false;
     }
     return true;
 }
@@ -64,5 +64,40 @@ let obj1 = { a: 1, b: { c: 2 } };
 let obj2 = { a: 1, b: { c: 2 } };
 let obj3 = { a: 1, b: { c: 3 } };
 
-console.log(deepEqual(obj1, obj2)); // true
-console.log(deepEqual(obj1, obj3)); // false
+console.log(deepEqual(obj1, obj2));
+console.log(deepEqual(obj1, obj3));
+
+
+
+// Problem 4 Organize Users by Skills 
+// You are given an array of user objects, where each object contains a name and an array of skills. Your task is to:
+// Create a Map where each unique skill is a key, and the value is an array of names of users who have that skill.
+// Sort the users under each skill alphabetically.
+
+let users = [
+    { name: "Alice", skills: ["JavaScript", "Python", "C++"] },
+    { name: "Bob", skills: ["JavaScript", "Go", "C++"] },
+    { name: "Charlie", skills: ["Python", "Go", "Ruby"] },
+    { name: "Arslan", skills: ["Python", "Go", "Ruby"] }
+];
+
+function organizeSkills(users) {
+    let skillMap = new Map();
+
+    users.forEach(user => {
+        user.skills.forEach(skill => {
+
+            if (!skillMap.has(skill)) {
+                skillMap.set(skill, [])
+            }
+            skillMap.get(skill).push(user.name)
+        })
+    });
+
+    // Sort User Alphabetically under each skill
+    skillMap.forEach((name, skill) => {
+        skillMap.set(skill, name.sort());
+    })
+    return skillMap
+}
+console.log(organizeSkills(users));
