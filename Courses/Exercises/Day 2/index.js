@@ -101,3 +101,34 @@ function organizeSkills(users) {
     return skillMap
 }
 console.log(organizeSkills(users));
+
+
+
+// Problem 5: Unique Substrings
+// Given a string s, write a function that returns the longest substring that consists of unique characters. 
+// You should optimize your solution using a Set or an object to store character occurrences.
+
+
+function longestUniqueSubstring(s) {
+    let maxLength = 0;
+    let start = 0;
+    let charSet = new Set();
+    let longestSubstr = "";
+  
+    for (let end = 0; end < s.length; end++) {
+      while (charSet.has(s[end])) {
+        charSet.delete(s[start]); // Remove characters until the current one is unique
+        start++;
+      }
+      charSet.add(s[end]);
+  
+      if (end - start + 1 > maxLength) {
+        maxLength = end - start + 1;
+        longestSubstr = s.substring(start, end + 1);
+      }
+    }
+  
+    return longestSubstr;
+  }
+  
+  console.log(longestUniqueSubstring("abcaabcdefabcbb")); // Output: "abcdef"
