@@ -142,3 +142,111 @@ if (ageValue >= 18 || (ageValue >= 16 && hasParentalConsent)) {
 
 
 // Unary Operators
+// Unary operators are operators that operate on a single operand (hence the term "unary"). 
+// These operators usually perform basic operations such as negation, incrementing, or type conversion.
+
+// Unary Plus (+)
+// The unary plus operator attempts to convert the operand into a number if it is not already. 
+// It doesn't affect numbers but can convert non-numeric values to numbers (like strings or booleans).
+let x = "5";
+console.log(+x);  // 5 (converts string "5" to the number 5)
+
+let y = true;
+console.log(+y);  // 1 (converts boolean true to the number 1)
+
+
+// Unary Negation (-)
+// The unary negation operator negates the value of its operand (converts positive to negative and vice versa) or converts the operand to a number and negates it.
+let g = 5;
+console.log(-g);  // -5 (negates the value)
+
+let h = "10";
+console.log(-h);  // -10 (converts string "10" to number and negates it)
+
+
+// Bouns Things 
+// Prefix: The value is incremented first, then the result is used.
+// Postfix: The original value is used first, then the value is incremented.
+
+
+// Increment (++)
+//  The increment operator increases the value of its operand by 1. It can be used in two forms:
+let i = 5;
+console.log(++i);  // 6 (prefix: increments first, then uses the value)
+
+let j = 5;
+console.log(j++);  // 5 (postfix: uses the original value, then increments)
+console.log(j);    // 6 (after increment)
+
+
+// Decrement (--)
+// The decrement operator decreases the value of its operand by 1. Like the increment operator, it has prefix and postfix forms.
+let k = 5;
+console.log(--k);  // 4 (prefix: decrements first, then uses the value)
+
+let l = 5;
+console.log(l--);  // 5 (postfix: uses the original value, then decrements)
+console.log(l);    // 4 (after decrement)
+
+
+// Logical NOT (!)
+// The logical NOT operator negates the truth value of its operand. If the operand is true, it becomes false, and if it is false, it becomes true.
+let isTrue = true;
+console.log(!isTrue);  // false (negates the boolean value)
+
+let isFalse = false;
+console.log(!isFalse); // true (negates the boolean value)
+
+
+// Typeof Operator (typeof)
+// The typeof operator returns a string that indicates the type of the operand (such as "number", "string", "boolean", etc.).
+
+let num = 5;
+console.log(typeof num);  // "number"
+
+let str = "Hello";
+console.log(typeof str);  // "string"
+
+let obj = { name: "Alice" };
+console.log(typeof obj);  // "object"
+
+
+// Bitwise NOT (~)
+// The bitwise NOT operator inverts the bits of its operand. It flips every bit in the binary representation of the operand (i.e., 0 becomes 1, and 1 becomes 0).
+let yz = 5;  // Binary representation: 00000000000000000000000000000101
+console.log(~yz);  // -6 (inverted binary becomes: 11111111111111111111111111111010)
+
+
+// Delete Operator (delete)
+// The delete operator is used to remove a property from an object.
+
+let obje = { name: "Alice", age: 25 };
+delete obje.age;
+console.log(obje);  // { name: "Alice" } (age property is removed)
+
+
+// Void Operator (void)
+// The void operator evaluates an expression but returns undefined. It is rarely used but can be helpful in specific situations.
+console.log(void 0);  // undefined (the expression `0` is evaluated but returns `undefined`)
+
+
+// Example 
+let o = 10;
+let p = "15";
+
+// Unary plus to convert string to number
+console.log(+p);  // 15
+
+// Unary negation to negate the value
+console.log(-o);  // -10
+
+// Increment and Decrement
+console.log(++o); // 11 (increments first, then uses the value)
+console.log(p--); // 15 (uses the value first, then decrements to 14)
+
+// Logical NOT to invert boolean values
+let isAvailable = true;
+console.log(!isAvailable);  // false
+
+// Typeof to check the type of a variable
+console.log(typeof o);  // "number"
