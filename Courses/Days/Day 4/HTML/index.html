@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Basic styling for the body */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Header styling */
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        /* Navigation styling */
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #444;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        /* Main content styling */
+        main {
+            padding: 20px;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .content article {
+            flex: 1 1 300px;
+            background: #f4f4f4;
+            margin: 10px;
+            padding: 15px;
+            box-shadow: 0 0 5px #aaa;
+        }
+
+        /* Footer styling */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 768px) {
+            header {
+                font-size: 1.2em;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            .content {
+                flex-direction: column;
+            }
+
+            footer {
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>My Responsive HTML5 Web Page</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- Main Content Section -->
+    <main>
+        <div class="content">
+            <article>
+                <h2>Article 1</h2>
+                <p>This is a sample article to demonstrate a responsive layout using HTML5 and CSS3 media queries.
+                    Resize the browser window to see the changes.</p>
+            </article>
+            <article>
+                <h2>Article 2</h2>
+                <p>This is another sample article to show how the content adjusts according to the screen size, making
+                    it suitable for both desktop and mobile devices.</p>
+            </article>
+            <article>
+                <h2>Article 3</h2>
+                <p>Using flexbox and media queries, we can easily create a flexible and adaptable layout. HTML5 elements
+                    help in defining the structure more semantically.</p>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 My Responsive Site</p>
+    </footer>
+</body>
+
+</html>

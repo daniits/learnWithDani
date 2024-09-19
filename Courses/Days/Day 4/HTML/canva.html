@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawable Canvas</title>
+    <style>
+        /* Basic styling for the canvas */
+        canvas {
+            border: 1px solid #000;
+            cursor: crosshair;
+        }
+    </style>
+</head>
+<body>
+    <h1>Draw on the Canvas</h1>
+    <canvas id="myCanvas" width="600" height="400"></canvas>
+    
+    <script>
+        // Get the canvas element and its context
+        const canvas = document.getElementById('myCanvas');
+        const context = canvas.getContext('2d');
+
+        // Variables to track the drawing state
+        let isDrawing = false;
+
+        // Function to start drawing
+        canvas.addEventListener('mousedown', (e) => {
+            isDrawing = true;
+            // Start a new path
+            context.beginPath();
+            // Move to the cursor's position without drawing a line
+            context.moveTo(e.offsetX, e.offsetY);
+        });
+
+        // Function to draw on the canvas
+        canvas.addEventListener('mousemove', (e) => {
+            if (isDrawing) {
+                // Draw a line to the cursor's position
+                context.lineTo(e.offsetX, e.offsetY);
+                // Draw the line with the chosen color and width
+                context.strokeStyle = 'blue';
+                context.lineWidth = 2;
+                context.stroke();
+            }
+        });
+
+        // Function to stop drawing
+        canvas.addEventListener('mouseup', () => {
+            isDrawing = false;
+            // End the path to ensure smooth lines
+            context.closePath();
+        });
+
+        // Stop drawing if the cursor leaves the canvas
+        canvas.addEventListener('mouseleave', () => {
+            isDrawing = false;
+            context.closePath();
+        });
+    </script>
+</body>
+</html>

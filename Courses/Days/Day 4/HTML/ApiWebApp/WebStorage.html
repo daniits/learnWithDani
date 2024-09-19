@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Storage Example</title>
+</head>
+<body>
+    <h1>Web Storage Example</h1>
+    <button onclick="storeData()">Store Data</button>
+    <button onclick="showData()">Show Stored Data</button>
+    <p id="output"></p>
+
+    <script>
+        // Function to store data in localStorage
+        function storeData() {
+            localStorage.setItem('username', 'JohnDoe');
+            sessionStorage.setItem('sessionData', 'This is session data.');
+            document.getElementById('output').innerHTML = "Data stored in localStorage and sessionStorage.";
+        }
+
+        // Function to retrieve and display stored data
+        function showData() {
+            const username = localStorage.getItem('username');
+            const sessionData = sessionStorage.getItem('sessionData');
+            document.getElementById('output').innerHTML = 
+                "Local Storage - Username: " + username + "<br>" +
+                "Session Storage - Session Data: " + sessionData;
+        }
+    </script>
+</body>
+</html>
