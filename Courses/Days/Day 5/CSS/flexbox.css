@@ -1,0 +1,46 @@
+:root{
+    --primary-bg-color: #333;
+    --primary-text-color: #fff;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header, .footer {
+    background-color: var(--primary-bg-color, #333);
+    color: var(--primary-text-color);
+    text-align: center;
+    padding: 20px;
+}
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 200px;
+}
+.nav {
+    background-color: #f4f4f4;
+    padding: 20px;
+    flex-basis: 20%;
+}
+.content {
+    background-color: #eaeaea;
+    padding: 20px;
+    flex-grow: 2; /* The content area will grow more */
+}
+
+.aside {
+    background-color: #ccc;
+    padding: 20px;
+    flex-basis: 20%; /* Sets the width of the aside */
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+}
