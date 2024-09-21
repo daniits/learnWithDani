@@ -61,5 +61,43 @@ Clear: Clears floated elements, preventing the next elements from wrapping aroun
 
 What is CSS Flexbox?
 CSS Flexbox (short for "Flexible Box Layout") is a modern layout module in CSS that makes it easier to design flexible and responsive layouts. It is particularly useful for creating dynamic, one-dimensional layouts (either rows or columns) where elements within a container can adjust and distribute space efficiently according to the available screen size or content.
-
 Flexbox is designed to provide better alignment and space distribution among items inside a container, even when their size is unknown or dynamic. It solves many layout challenges that were difficult to manage with older techniques like floats or inline-block.
+Key Concepts of Flexbox
+Flex Container 
+The parent element that has display: flex; applied to it. This container contains "flex items."
+Example
+display: flex;
+flex-direction:
+flex-wrap:
+Controls whether the flex items should wrap onto multiple lines if they overflow the container.
+nowrap (default): Items will stay on one line and shrink to fit.
+wrap: Items will wrap onto multiple lines.
+wrap-reverse: Items will wrap in the reverse direction
+justify-content: 
+aligin-items:
+Controls the vertical alignment of flex items along the cross axis (perpendicular to the main axis).
+flex-start: Items are aligned to the start of the cross axis.
+flex-end: Items are aligned to the end.
+center: Items are aligned in the center.
+stretch: Items stretch to fill the container (default).
+
+Flex Items: The child elements inside the flex container that are arranged according to the flexbox rules.
+flex-grow:
+Defines how much a flex item will grow relative to the rest of the flex items in the container when there is extra space.
+Example: If one item has flex-grow: 2; and another has flex-grow: 1;, the first item will grow twice as much as the second.
+flex-shrink
+Defines how much a flex item will shrink relative to the other flex items when there is not enough space.
+Default is 1, meaning items shrink proportionally. If set to 0, the item will not shrink.
+flex-basis
+Specifies the initial size of a flex item before any space distribution takes place.
+It can be defined in any CSS unit (e.g., px, %, rem).
+align-self
+Allows overriding the align-items property for individual flex items.
+Possible values: flex-start, flex-end, center, stretch, baseline.
+order
+Controls the order of flex items in the layout. Items with lower values appear first.
+Default value is 0. Negative or positive integers can be used.
+
+CSS Flexbox is a powerful and versatile tool for creating flexible, responsive, and well-aligned layouts. By using flex containers and flex items along with properties like justify-content, align-items, and flex-grow, you can easily create complex layouts that adapt to various screen sizes and user interfaces.
+
+
