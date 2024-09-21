@@ -1,0 +1,68 @@
+/* CSS File: styles.css */
+.hover-example {
+    color: black;
+    text-decoration: none;
+}
+
+.hover-example:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+li:nth-child(2) {
+    color: blue;
+    font-weight: bold;
+}
+
+.first-letter-example::first-letter {
+    font-size: 30px;
+    color: red;
+    font-weight: bold;
+}
+
+.before-example::before {
+    content: "🌟 ";
+    color: gold;
+    font-size: 24px;
+}
+
+.after-example::after {
+    content: " 💡";
+    color: yellow;
+    font-size: 24px;
+}
+
+.first-line-example::first-line {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+/* Lower specificity */
+p { color: blue; }
+
+/* Higher specificity */
+.text { color: green; }
+
+/* Highest specificity */
+#unique { color: red; }
+
+
+/* CSS File: styles.css */
+.box {
+    width: 200px;            /* Width of the content */
+    height: 100px;           /* Height of the content */
+    padding: 20px;           /* Space between content and border */
+    border: 5px solid blue;  /* Border around the box */
+    margin: 30px;            /* Space around the box */
+    box-sizing: content-box; /* Default box-sizing */
+}
+
+.box2 {
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    border: 5px solid blue;
+    margin: 30px;
+    box-sizing: border-box; /* Now the width includes padding and border */
+}
