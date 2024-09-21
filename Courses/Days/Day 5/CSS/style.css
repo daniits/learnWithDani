@@ -46,3 +46,23 @@ p { color: blue; }
 
 /* Highest specificity */
 #unique { color: red; }
+
+
+/* CSS File: styles.css */
+.box {
+    width: 200px;            /* Width of the content */
+    height: 100px;           /* Height of the content */
+    padding: 20px;           /* Space between content and border */
+    border: 5px solid blue;  /* Border around the box */
+    margin: 30px;            /* Space around the box */
+    box-sizing: content-box; /* Default box-sizing */
+}
+
+.box2 {
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    border: 5px solid blue;
+    margin: 30px;
+    box-sizing: border-box; /* Now the width includes padding and border */
+}

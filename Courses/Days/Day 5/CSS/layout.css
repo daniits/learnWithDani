@@ -1,0 +1,69 @@
+:root {
+    --primary-bg-color: #333; 
+    --primary-text-color: #FFFF; 
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+
+.header {
+    background-color: var(--primary-bg-color);
+    color: var(--primary-text-color, #000);
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    position: relative; /* Positioning example */
+}
+
+
+/* Footer */
+.footer {
+    background-color: var(--primary-bg-color);
+    color: var(--primary-text-color, #000);
+    text-align: center;
+    padding: 15px;
+    position: relative;
+}
+
+/* Container for sidebar main content */
+
+.container {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.sidebar {
+    float: left; /* Float the sidebar to the left */
+    width: 30%; /* 30% width for the sidebar */
+    background-color: #f4f4f4;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+/* Main Content */
+.main-content {
+    float: left; /* Float the main content to the left */
+    width: 70%; /* 70% width for the main content */
+    padding: 15px;
+    background-color: #eaeaea;
+    box-sizing: border-box;
+}
+
+
+.footer {
+    clear: both; /* Clear both left and right floats */
+}
+
+
+@media (max-width: 600px) {
+    .sidebar, .main-content {
+        width: 100%; /* Make both columns full width on small screens */
+        float: none; /* Remove float */
+    }
+}
