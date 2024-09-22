@@ -101,3 +101,35 @@ Default value is 0. Negative or positive integers can be used.
 CSS Flexbox is a powerful and versatile tool for creating flexible, responsive, and well-aligned layouts. By using flex containers and flex items along with properties like justify-content, align-items, and flex-grow, you can easily create complex layouts that adapt to various screen sizes and user interfaces.
 
 
+
+What is CSS Grid?
+CSS Grid is a powerful two-dimensional layout system that allows developers to create complex web layouts with ease. Unlike Flexbox, which is best for arranging elements in a single row or column, CSS Grid excels at organizing elements both horizontally (rows) and vertically (columns). It gives you precise control over the positioning of items within a grid, making it ideal for creating more intricate layouts.
+Key Concepts of CSS Grid
+Grid Container: 
+The parent element that holds the grid layout. You apply display: grid; to this element.
+Grid Items: 
+The child elements inside the grid container, which are arranged into rows and columns.
+
+Defining Grid Structure
+You can define the grid's structure by specifying the number of rows and columns. The key properties used to define this structure are grid-template-columns and grid-template-rows.
+2.1. grid-template-columns and grid-template-rows
+These properties define the number of columns and rows in the grid and their respective sizes.
+Example: Creating a grid with three columns of equal width and two rows of different heights.
+
+
+Define Placing Grid Item?
+3.1. Explicit Grid Placement
+You can explicitly place grid items in specific rows and columns using the following properties:
+grid-column: Defines the starting and ending columns of a grid item.
+grid-row: Defines the starting and ending rows of a grid item.
+Example: Placing an item to span two columns and one row.
+
+3.2. Grid Lines and Spanning
+You can also control how many rows or columns an item spans using the span keyword.
+Example: Spanning across multiple rows and columns
+
+what is Grid Gap?
+The gap property is used to define the space between grid items (both horizontally and vertically).
+
+What is Grid Areas?
+CSS Grid allows you to define named grid areas and position elements into these areas using the grid-template-areas property. This makes it easier to create more complex layouts like headers, footers, and sidebars.
