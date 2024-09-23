@@ -1,0 +1,20 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    width: calc(25% - 20px);
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+}
+img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+h2 {
+    font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem);
+  }
