@@ -1,0 +1,56 @@
+<!-- Interactive Landing Page with Advanced Grid, Animations, and Clamp -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page - Advance CSS</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <header>
+        <content class="hero">
+            <h1>Welcome To Our Landing Page</h1>
+        </content>
+    </header>
+    <!-- Main Content Section -->
+    <main class="features" id="features">
+        <content class="feature-box">
+            <h2>Feature 1</h2>
+            <p>Details about feature 1.</p>
+        </content>
+        <content class="feature-box">
+            <h2>Feature 2</h2>
+            <p>Details about feature 2.</p>
+        </content>
+        <content class="feature-box">
+            <h2>Feature 3</h2>
+            <p>Details about feature 3.</p>
+        </content>
+        <content class="feature-box">
+        <h2>Feature 4</h2>
+        <p>Details about feature 4.</p>
+        </content>
+    </main>
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Your Company</p>
+    </footer>
+
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const featuresSection = document.querySelector(".features");
+            const triggerBottom = window.innerHeight * 0.8;
+
+            if (featuresSection.getBoundingClientRect().top < triggerBottom) {
+                featuresSection.classList.add('active');
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -4,7 +4,6 @@
 - *Problem*: This first project will be a simple personal profile page that displays your name, a brief bio, and some contact information.
 
 
-
 ### Project 2
 - *Problem*: Personal Profile Card
 - **Objective**:
@@ -59,3 +58,21 @@
 -------clamp() for spacing
 -------CSS animations for hover effects
 -------Custom properties (CSS variables) for theming
+
+### Project 5
+- **Problem**: Interactive Landing Page with Advanced Grid, Animations, and Clamp
+- **Objective**:
+-------Master complex grid layouts
+-------Use CSS animations and keyframes
+-------Responsive units with clamp() and calc()
+-------Parallax scrolling effect
+- **Project Requirements**:
+-------Create a landing page with a hero section, features section, and footer.
+-------The hero section should have a background image that uses a parallax effect (scroll effect where the background moves slower than the content).
+-------Use CSS Grid for the features section. The grid should automatically adjust the number of columns based on the screen size using media queries.
+-------Use clamp() to control font sizes, padding, and margins responsively. Add CSS animations to reveal the features section as the user scrolls.
+- **Key Concepts**:
+-------Advanced CSS Grid layout
+-------CSS animations with @keyframes
+-------Parallax scrolling effect
+-------clamp() for responsive design
