@@ -1,0 +1,21 @@
+:root{
+    --primary-color: #4CAF50;
+    --secondary-color: #f44336;
+}
+.pricing-table {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: clamp(1rem, 2vw + 1rem, 3rem);
+}
+.pricing-plan{
+    background-color: var(--primary-color);
+    padding: clamp(1.5rem, 2vw + 1rem, 3rem);
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, background-color 0.3 ease-in-out;
+}
+.pricing-plan:hover{
+    transform: scale(1.05);
+    background-color: var(--secondary-color);
+}
