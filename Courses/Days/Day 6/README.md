@@ -40,3 +40,22 @@
 -------Flexbox for layout
 -------clamp() for responsive typography
 -------calc() for dynamic sizing
+
+
+### Project 4 
+- **Problem**: Pricing Table with Grid, Animations, and Clamp
+- **Objective**:
+-------CSS Grid for layout
+-------clamp() for responsive spacing
+-------Animations for hover effects
+-------Custom properties for colors
+- **Project Requirements**:
+-------Build a responsive pricing table using CSS Grid. The table should have three pricing plans: Basic, Standard, and Premium.
+-------Use clamp() to control padding and margin based on the screen size.
+-------Add hover animations to change the background color and scale up the pricing plans when hovered.
+-------Define custom properties (--primary-color, --secondary-color, etc.) for color theming.
+- **Key Concepts**:
+-------CSS Grid for table layout
+-------clamp() for spacing
+-------CSS animations for hover effects
+-------Custom properties (CSS variables) for theming
