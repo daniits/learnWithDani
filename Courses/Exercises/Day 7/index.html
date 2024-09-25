@@ -11,14 +11,31 @@
 <body>
     <header>
         <nav class="navbar">
-            <ul class="">
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
+            <ul class="navbar-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
-            <span>Landing</span>
-            <button>Buy Now</button>
+            <h2 class="navbar-logo">Landing</h2>
+            <button class="btn-buy-now">Buy Now</button>
         </nav>
+        <!-- Use div instead of content -->
+        <div class="header-content">
+            <section class="header-banner-text">
+                <h1>Introduce Your Product Quickly & Effectively</h1>
+                <h6>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
+                    massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                    mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis
+                    enim.</h6>
+                <div class="banner-buttons">
+                    <button class="btn-primary">Purchase UI Kit</button>
+                    <button class="btn-secondary">Learn More</button>
+                </div>
+            </section>
+            <section class="banner-image">
+                <img src="./Images/Group.png" alt="Banner Image" />
+            </section>
+        </div>
     </header>
 </body>
 

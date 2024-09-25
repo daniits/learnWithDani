@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 :root {
     --primary-color: #091133;
     --secondary-color: #6F7CB2;
-    --primary-text-color: #5D6970;
+    --primary-text-color: #37447E;
+    --secondary-text-color: #505F98;
+    --primary-button-color: #111B47;
 }
 
 * {
@@ -12,19 +14,171 @@
     box-sizing: border-box;
 }
 
-nav {
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--primary-text-color);
+}
+
+/* Header with background */
+header {
+    height: 100vh;
+    background-image: url(./Images/bg.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-attachment: fixed;
+}
+
+/* Navigation Bar */
+.navbar {
     width: 100%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-.navbar>ul {
+/* Navigation links */
+.navbar-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: var(--secondary-text-color);
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for links */
+.navbar-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Logo Styling */
+.navbar-logo {
+    font-size: 26px;
+    color: var(--primary-text-color);
+}
+
+/* Button Styling */
+.btn-buy-now {
+    background-color: var(--primary-button-color);
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effect */
+.btn-buy-now:hover {
+    background-color: var(--secondary-color);
+    cursor: pointer;
+}
+
+/* Header Content Section */
+.header-content {
+    padding: 20px 20px 0px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.header-banner-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.header-banner-text > h6 {
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+.banner-buttons {
     display: flex;
     gap: 20px;
-
 }
 
-.navbar>ul>li {
-    font-family: 'Roboto';
-    list-style-type: none;
+.header-banner-text > h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--primary-color);
+}
+
+.banner-image {
+    width: 500px;
+    height: auto;
+}
+
+.banner-image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Button Styling for Banner */
+.btn-primary, .btn-secondary {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-button-color);
+    color: white;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-button-color);
+    border: 2px solid var(--primary-button-color);
+}
+
+/* Hover effects for banner buttons */
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-button-color);
+    color: white;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .header-banner-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .banner-image {
+        width: 80%;
+        margin-top: 20px;
+    }
 }
