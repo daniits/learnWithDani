@@ -9,8 +9,8 @@
 }
 
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -34,27 +34,24 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 20px;
 }
 
 /* Navigation links */
-.navbar-links {
+.navbar-menu {
     display: flex;
     gap: 40px;
     list-style: none;
 }
 
-.navbar-links a {
+.navbar-menu a {
     text-decoration: none;
     color: var(--secondary-text-color);
     font-size: 14px;
     transition: color 0.3s ease;
 }
 
-/* Hover effect for links */
-.navbar-links a:hover {
+.navbar-menu a:hover {
     color: var(--primary-color);
 }
 
@@ -65,7 +62,7 @@ header {
 }
 
 /* Button Styling */
-.btn-buy-now {
+.button-buy-now {
     background-color: var(--primary-button-color);
     color: white;
     padding: 10px 20px;
@@ -75,59 +72,57 @@ header {
     transition: background-color 0.3s ease;
 }
 
-/* Button Hover Effect */
-.btn-buy-now:hover {
+.button-buy-now:hover {
     background-color: var(--secondary-color);
     cursor: pointer;
 }
 
 /* Header Content Section */
 .header-content {
-    padding: 20px 20px 0px 80px;
+    padding: 20px 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100%;
 }
 
-.header-banner-text {
+.header-text {
     width: 50%;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.header-banner-text>h6 {
+.header-text h6 {
     line-height: 1.8;
     font-weight: 400;
 }
 
-.banner-buttons {
+.header-buttons {
     display: flex;
     gap: 20px;
 }
 
-.header-banner-text>h1 {
+.header-text h1 {
     font-size: 50px;
     font-weight: 700;
     line-height: 1.2;
     color: var(--primary-color);
 }
 
-.banner-image {
+.header-image {
     width: 500px;
-    height: auto;
 }
 
-.banner-image>img {
+.header-image img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
 /* Button Styling for Banner */
-.btn-primary,
-.btn-secondary {
+.button-primary,
+.button-secondary {
     padding: 10px 20px;
     font-size: 14px;
     border: none;
@@ -135,88 +130,144 @@ header {
     transition: background-color 0.3s ease;
 }
 
-.btn-primary {
+.button-primary {
     background-color: var(--primary-button-color);
     color: white;
 }
 
-.btn-secondary {
+.button-secondary {
     background-color: transparent;
     color: var(--primary-button-color);
     border: 2px solid var(--primary-button-color);
 }
 
-/* Hover effects for banner buttons */
-.btn-primary:hover {
+.button-primary:hover {
     background-color: var(--secondary-color);
 }
 
-.btn-secondary:hover {
+.button-secondary:hover {
     background-color: var(--primary-button-color);
     color: white;
 }
 
-.main-section_first {
+/* Features Section */
+.features-section {
     display: flex;
-    padding: 80px 120px 0px 120px;
+    padding: 80px 120px;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
-.main-section-first_textArea-first {
-    display: grid;
-    gap: 20px;
-   
-}
-.main-section-first_textArea-first > h6 {
-    line-height: 2;
-    font-size: 16px;
-    font-weight: 400;
-    color: var(--secondary-color); 
-    margin-bottom: 50px;
-}
 
-.main-section-first_textArea {
-    display: grid;
-    gap: 15px;
+.features-text {
     width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
-
+    gap: 15px;
 }
 
-.main-section-first_textArea>h2 {
+.features-text h6 {
+    line-height: 2;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--secondary-color);
+    margin-bottom: 50px;
+}
+
+.features-text h2 {
     font-size: 36px;
     color: var(--primary-color);
     font-weight: 500;
 }
-.main-section-first_card-details {
+
+.features-cards {
     display: flex;
     justify-content: space-between;
+    gap: 20px;
 }
-.main-section-first_card-details > div {
+
+.feature-card {
     width: 35%;
     display: grid;
     gap: 12px;
-    height: 138px;
 }
-.main-section-first_card-details > div > h3{
+
+.feature-card h3 {
     font-size: 16px;
     color: var(--primary-color);
 }
-.main-section-first_card-details > div > h6{
+
+.feature-card h6 {
     font-size: 12px;
     color: #5D6970;
     font-weight: 400;
 }
-.main-section_first > content:nth-child(2) > img {
-    width: 524px ;
+
+.features-image img {
+    width: 524px;
 }
 
+/* Info Section */
+.info-section {
+    display: flex;
+    padding: 80px 120px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
+.info-image img {
+    width: 524px;
+}
+
+.info-text {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Details Section */
+.details-section {
+    display: flex;
+    padding: 80px 120px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.details-image img {
+    width: 524px;
+}
+
+.details-text {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Call-to-Action Section */
+.cta-section {
+    display: flex;
+    padding: 80px 120px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.cta-image img {
+    width: 524px;
+}
+
+.cta-text {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
 
 /* Responsive Styling */
 @media (max-width: 768px) {
@@ -225,7 +276,7 @@ header {
         gap: 20px;
     }
 
-    .navbar-links {
+    .navbar-menu {
         flex-direction: column;
         gap: 10px;
     }
@@ -235,12 +286,12 @@ header {
         padding: 20px;
     }
 
-    .header-banner-text {
+    .header-text {
         width: 100%;
         text-align: center;
     }
 
-    .banner-image {
+    .header-image {
         width: 80%;
         margin-top: 20px;
     }
