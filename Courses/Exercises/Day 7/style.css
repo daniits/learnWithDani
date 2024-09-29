@@ -268,7 +268,32 @@ header {
     flex-direction: column;
     gap: 15px;
 }
+.pricing-section {
+    background-image: url(./Images/Rectangle.png);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.pricing-section h2 {
+    font-size: 36px;
+    color: var(--primary-color);
+}
+.pricing-section h6 {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: var(--secondary-color);
+}
 
+.pricing-section h3 {
+    font-size: 50px;
+    color: var(--primary-color);
+}
 /* Responsive Styling */
 @media (max-width: 768px) {
     .navbar {
