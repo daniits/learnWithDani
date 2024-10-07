@@ -1,0 +1,72 @@
+:root {
+    --clr-accent: #faa700;
+    --clr-text: #fff;
+    --spacer: 2rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    line-height: 1.6;
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+/* Header Section */
+.header {
+    color: var(--clr-text);
+    text-align: center;
+    padding: 15em 0;
+    background: #222;
+}
+
+@supports (background-blend-mode: multiply) {
+    .header {
+        background: url(./assets/img/shoe-3.png), radial-gradient(#444, #111);
+        background-blend-mode: multiply;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}
+
+.header__content {
+    width: 85%;
+    max-width: 65em;
+    margin: 0 auto;
+}
+
+.header__content > * + * {
+    margin-top: var(--spacer);
+}
+
+.header__title {
+    font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.header__button {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--clr-text);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    padding: 0.5em 1.25em;
+    background: var(--clr-accent);
+    border-radius: 0.25em;
+    transition: transform 250ms ease-in-out, opacity 250ms linear;
+}
+
+.header__button:hover,
+.header__button:focus {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
