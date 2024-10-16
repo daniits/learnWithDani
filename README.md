@@ -1,3 +1,5 @@
+### Learn Together
+
 The repository "learnWithDani" on GitHub is a comprehensive guide designed to help learners master JavaScript, from the basics to more advanced concepts. It includes tutorials and exercises covering a wide range of JavaScript topics such as variables, functions, objects, DOM manipulation, asynchronous programming (callbacks, promises, async/await), and ES6+ features.
 
 The project is structured to provide a solid foundation for JavaScript programming, making it ideal for beginners looking to understand the fundamentals as well as more experienced developers who want to explore advanced topics like JavaScript design patterns, modules, and browser APIs.
